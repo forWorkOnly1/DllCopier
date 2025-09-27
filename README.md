@@ -24,19 +24,8 @@ The development team faced significant challenges with **three separate solution
 - **Critical Issue**: Developers couldn't test local changes to shared components without first merging to the main repository, creating development bottlenecks and slowing down the development cycle
 
 ### **Solution: Shared DLLs Local Sync Tool**
-I designed and implemented a **C# console application** to streamline the local development workflow:
+I designed and implemented a **C# console application** to streamline the local development workflow.
 
-```csharp
-// Core functionality: Automated DLL synchronization
-public class SharedDllSyncTool
-{
-    public void SyncLocalDlls(string sourcePath, string[] targetPaths)
-    {
-        // Automated copying of shared DLLs to local development directories
-        // Enables immediate testing without Git merge dependencies
-    }
-}
-```
 
 ### **Key Features & Planned Implementation**
 - 🔄 **Automated DLL Synchronization** - Intelligent copying of updated shared DLLs to local client/server directories
@@ -94,4 +83,5 @@ This project provided hands-on experience with:
 ---
 
 *Although the internship concluded before full implementation, this project demonstrates strong problem-solving skills and understanding of enterprise development challenges. The solution design showcases practical application of .NET technologies to optimize team workflows.*
+
 Brief :The team have an issue with building 3 seperate solutions in 3 seperate git repos. there is a solution which is called shared, because it contains dlls shared between the client and the server(2 other solutions). the shared dlls are used as nuget packages in the client and server, so if they make a change in the shared and want to test it locally, they simply can't do that, therefore, they need to merge the code to the git repo first the test it. to resolve this issue, I tried to create a console app in c# that takes the shared dlls and copy them in the local folder so we can test locally before the merge.
